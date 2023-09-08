@@ -1,15 +1,30 @@
-Working progress...
+# 🔐 SHA-256 Hash Tool
 
-🔚 Final idea:
-📺 Initial scene with two options: Encrypt or Decrypt
-1️⃣ Encrypt: Encrypts a String using the SHA-256 hash
-2️⃣ Decrypt: Using a dictionary, by brute force try to decrypt it.
-🔐 Encrypt scene:
-- A TextField to write the text
-- Encrypt button (Locks the TextField)
-- Button to clear the TextField (Unlocks the TextField)
-- Copy button (Copies the Hash)
-🔓 Decrypt scene:
-- Encrypt button (Locks the TextField)
-- Clear TextField button (Unlocks the TextField)
-- Copy button (Copies the Hash)
+## 🛠️ Under development...
+
+
+## ⚒️  Programming languages utilized in the development of this application:
+<ul style="list-style-type: none;">
+  <li>Java 
+    <br><img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="60" height="60"/></li>
+</ul>
+
+## ❔ Final idea:
+- Initial scene with two options: Encrypt or Decrypt
+- Encrypt: Encrypts a String using the SHA-256 hash
+- Decrypt: Using a dictionary, by brute force try to decrypt it.
+  - 🔐 Encrypt scene:
+      - A TextField to write the text
+      - Encrypt button (Locks the TextField)
+      - Button to clear the TextField (Unlocks the TextField)
+      - Copy button (Copies the Hash)
+  - 🔐 Decrypt scene:
+      - Decrypt button (Locks the TextField)
+      - Clear TextField button (Unlocks the TextField)
+      - Copy button (Copies the decoded String)
+
+## 📚  Libraries implemented in the development process: 
+- JavaFX 19.0.2
+
+
+
