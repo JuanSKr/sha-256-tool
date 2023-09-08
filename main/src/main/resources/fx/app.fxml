@@ -24,7 +24,7 @@
                         <Font name="System Bold" size="30.0" />
                     </font>
                 </Label>
-                <Button fx:id="hashButton" layoutX="176.0" layoutY="277.0" mnemonicParsing="false" onAction="#actionButton" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Encrypt" />
+                <Button fx:id="hashButton" layoutX="176.0" layoutY="277.0" mnemonicParsing="false" onAction="#encryptedButton" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Encrypt" />
             <Button fx:id="cleanButton" layoutX="262.0" layoutY="277.0" mnemonicParsing="false" onAction="#cleanButton" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Clean" />
             <Button fx:id="copyButton" layoutX="345.0" layoutY="277.0" mnemonicParsing="false" onAction="#copyHash" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Copy" />
             </children>

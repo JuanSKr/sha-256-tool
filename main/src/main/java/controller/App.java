@@ -28,22 +28,16 @@ public class App {
     @FXML
     private TextField txtField;
 
-    public void actionButton(ActionEvent e) throws IOException {
-        encryptedButton();
-    }
-
-
+    @FXML
     protected void encryptedButton() {
 
         String texto = txtField.getText();
 
         if (texto.isEmpty()) {
-            emptyField.setText("Escribe algo");
+            System.out.println("Empty");
         } else {
             txtField.setText(Hash.getSHA256Hash(texto));
             txtField.setEditable(false);
-            emptyField.setText(" ");
-
         }
     }
 
@@ -60,7 +54,7 @@ public class App {
         String texto = txtField.getText();
 
         if (texto.isEmpty()) {
-            emptyField.setText("Escribe algo");
+            System.out.println("Empty");
         } else {
             Clipboard clipboard = Clipboard.getSystemClipboard();
             ClipboardContent content = new ClipboardContent();
