@@ -15,6 +15,9 @@ public class App {
     private Button hashButton;
 
     @FXML
+    private Button cleanButton;
+
+    @FXML
     private Label emptyField;
 
     @FXML
