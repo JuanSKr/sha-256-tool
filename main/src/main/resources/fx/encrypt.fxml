@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.App">
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="276.0" fitWidth="380.0" layoutX="112.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/sk-logo.png" />
+                    </image>
+                </ImageView>
+                <TextField fx:id="txtField" layoutX="41.0" layoutY="233.0" prefHeight="29.0" prefWidth="513.0" promptText="Type here" />
+                <Label layoutX="229.0" layoutY="180.0" text="SHA-256" textFill="#ffc900">
+                    <font>
+                        <Font name="System Bold" size="30.0" />
+                    </font>
+                </Label>
+                <Button fx:id="hashButton" layoutX="176.0" layoutY="277.0" mnemonicParsing="false" onAction="#encryptedButton" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Encrypt" />
+            <Button fx:id="cleanButton" layoutX="262.0" layoutY="277.0" mnemonicParsing="false" onAction="#cleanButton" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Clean" />
+            <Button fx:id="copyButton" layoutX="345.0" layoutY="277.0" mnemonicParsing="false" onAction="#copyHash" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Copy" />
+            <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBack" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Return" />
+                <Label fx:id="emptyField" layoutX="42.0" layoutY="200.0" prefHeight="35.0" prefWidth="225.0" text="Write something..." textFill="WHITE" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="copiedTxt" layoutX="400.0" layoutY="195.0" prefHeight="35.0" prefWidth="225.0" text="Correctly copied" textFill="#2bff00" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="400.0" prefWidth="335.0" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>

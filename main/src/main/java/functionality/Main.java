@@ -30,8 +30,18 @@ public class Main extends Application {
 
     }
 
-    public void changeScene(String fxml) throws IOException {
-        Parent pane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fx/app.fxml")));
+    public void encryptScene(String fxml) throws IOException {
+        Parent pane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fx/encrypt.fxml")));
+        stg.getScene().setRoot(pane);
+    }
+
+    public void decryptScene(String fxml) throws IOException {
+        Parent pane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fx/decrypt.fxml")));
+        stg.getScene().setRoot(pane);
+    }
+
+    public void enterScene(String fxml) throws  IOException {
+        Parent pane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fx/enter.fxml")));
         stg.getScene().setRoot(pane);
     }
 

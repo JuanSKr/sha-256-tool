@@ -1,5 +1,6 @@
 package controller;
 
+import functionality.Main;
 import hash_code.Hash;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,10 +24,17 @@ public class App {
     private Button copyButton;
 
     @FXML
+    private Button backButton;
+
+    @FXML
     private Label emptyField;
 
     @FXML
+    private Label copiedTxt;
+
+    @FXML
     private TextField txtField;
+
 
     @FXML
     protected void encryptedButton() {
@@ -34,8 +42,9 @@ public class App {
         String texto = txtField.getText();
 
         if (texto.isEmpty()) {
-            System.out.println("Empty");
+            emptyField.setVisible(true);
         } else {
+            emptyField.setVisible(false);
             txtField.setText(Hash.getSHA256Hash(texto));
             txtField.setEditable(false);
         }
@@ -46,6 +55,7 @@ public class App {
 
         txtField.clear();
         txtField.setEditable(true);
+        copiedTxt.setVisible(false);
 
     }
 
@@ -54,17 +64,22 @@ public class App {
         String texto = txtField.getText();
 
         if (texto.isEmpty()) {
-            System.out.println("Empty");
+            emptyField.setVisible(true);
         } else {
             Clipboard clipboard = Clipboard.getSystemClipboard();
             ClipboardContent content = new ClipboardContent();
 
+            copiedTxt.setVisible(true);
             content.putString(texto);
             clipboard.setContent(content);
 
         }
+    }
 
-
+    @FXML
+    public void goBack(ActionEvent event) throws IOException {
+        Main m = new Main();
+        m.enterScene("enter.fxml");
     }
 
 }
