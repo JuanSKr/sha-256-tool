@@ -9,30 +9,31 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/19.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.App">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.App">
     <left>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
-                <ImageView fitHeight="274.0" fitWidth="338.0" layoutX="-44.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="276.0" fitWidth="380.0" layoutX="116.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../img/sk-logo.png" />
                     </image>
                 </ImageView>
+                <TextField fx:id="txtField" layoutX="47.0" layoutY="233.0" prefHeight="29.0" prefWidth="513.0" promptText="Type here" />
+                <Label layoutX="233.0" layoutY="180.0" text="SHA-256" textFill="#ffc900">
+                    <font>
+                        <Font name="System Bold" size="30.0" />
+                    </font>
+                </Label>
+                <Button fx:id="hashButton" layoutX="176.0" layoutY="277.0" mnemonicParsing="false" onAction="#actionButton" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Encrypt" />
+            <Button fx:id="cleanButton" layoutX="262.0" layoutY="277.0" mnemonicParsing="false" onAction="#cleanButton" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Clean" />
+            <Button fx:id="copyButton" layoutX="345.0" layoutY="277.0" mnemonicParsing="false" onAction="#copyHash" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Copy" />
             </children>
         </AnchorPane>
     </left>
     <center>
         <AnchorPane prefHeight="400.0" prefWidth="335.0" BorderPane.alignment="CENTER">
             <children>
-                <Label layoutX="49.0" layoutY="155.0" text="SHA-256" textFill="#ffc900">
-                    <font>
-                        <Font name="System Bold" size="28.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="txtField" layoutX="-66.0" layoutY="200.0" prefHeight="29.0" prefWidth="350.0" promptText="Type here" />
-                <Button fx:id="hashButton" layoutX="19.0" layoutY="244.0" mnemonicParsing="false" onAction="#actionButton" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Encrypt" />
                 <Label fx:id="wrongLogIn" layoutX="153.0" layoutY="127.0" textFill="RED" />
-            <Button fx:id="cleanButton" layoutX="114.0" layoutY="244.0" mnemonicParsing="false" onAction="#cleanButton" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Clean" />
             </children>
         </AnchorPane>
     </center>

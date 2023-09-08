@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 
 import java.io.IOException;
 
@@ -16,6 +18,9 @@ public class App {
 
     @FXML
     private Button cleanButton;
+
+    @FXML
+    private Button copyButton;
 
     @FXML
     private Label emptyField;
@@ -32,7 +37,7 @@ public class App {
 
         String texto = txtField.getText();
 
-        if(texto.isEmpty()) {
+        if (texto.isEmpty()) {
             emptyField.setText("Escribe algo");
         } else {
             txtField.setText(Hash.getSHA256Hash(texto));
@@ -49,4 +54,23 @@ public class App {
         txtField.setEditable(true);
 
     }
+
+    @FXML
+    protected void copyHash() {
+        String texto = txtField.getText();
+
+        if (texto.isEmpty()) {
+            emptyField.setText("Escribe algo");
+        } else {
+            Clipboard clipboard = Clipboard.getSystemClipboard();
+            ClipboardContent content = new ClipboardContent();
+
+            content.putString(texto);
+            clipboard.setContent(content);
+
+        }
+
+
+    }
+
 }
