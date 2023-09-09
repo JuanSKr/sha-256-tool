@@ -7,21 +7,21 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/19.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Enter">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Enter">
     <center>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
-                <ImageView fitHeight="382.0" fitWidth="492.0" layoutX="59.0" layoutY="-33.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="382.0" fitWidth="492.0" layoutX="52.0" layoutY="-33.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../img/sk-logo.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="encrypt" layoutX="154.0" layoutY="255.0" mnemonicParsing="false" onAction="#goEncrypt" prefHeight="44.0" prefWidth="134.0" style="-fx-background-color: #FFC900;" text="Encrypt">
+                <Button fx:id="encrypt" layoutX="147.0" layoutY="255.0" mnemonicParsing="false" onAction="#goEncrypt" prefHeight="44.0" prefWidth="134.0" style="-fx-background-color: #FFC900;" text="Encrypt">
                     <font>
                         <Font size="27.0" />
                     </font>
                 </Button>
-            <Button fx:id="decrypt" layoutX="319.0" layoutY="255.0" mnemonicParsing="false" onAction="#goDecrypt" prefHeight="44.0" prefWidth="134.0" style="-fx-background-color: #FFC900;" text="Decrypt ">
+            <Button fx:id="decrypt" layoutX="312.0" layoutY="255.0" mnemonicParsing="false" onAction="#goDecrypt" prefHeight="44.0" prefWidth="134.0" style="-fx-background-color: #FFC900;" text="Decrypt ">
                <font>
                   <Font size="26.0" />
                </font>

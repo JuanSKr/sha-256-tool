@@ -1,6 +1,7 @@
 package controller;
 
 import functionality.Main;
+import hash_code.Decrypt;
 import hash_code.Hash;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -85,6 +86,8 @@ public class App {
         String text = txtField.getText();
         String filePath = "/yml/dictionary.yml";
 
+        Decrypt decrypt = new Decrypt();
+
         Pattern pattern = Pattern.compile("^[a-fA-F0-9]{64}$");
         Matcher matcher = pattern.matcher(text);
 
@@ -94,7 +97,7 @@ public class App {
             invalidHash.setVisible(false);
         } else {
             if (matcher.matches()) {
-                txtField.setText(goDecrypt(text, filePath));
+                txtField.setText(decrypt.goDecrypt(text, filePath));
                 txtField.setEditable(false);
                 emptyField2.setVisible(false);
                 invalidHash.setVisible(false);
@@ -104,32 +107,6 @@ public class App {
                 invalidHash.setVisible(true);
                 copiedTxt.setVisible(false);
             }
-        }
-
-    }
-
-    protected String goDecrypt(String hash, String filepath) {
-
-        try {
-
-            InputStream inputStream = App.class.getResourceAsStream(filepath);
-
-            Yaml yaml = new Yaml();
-
-            Map<String, Map<String, String>> yamlData = yaml.load(inputStream);
-
-            if (yamlData.containsKey("Dictionary")) {
-                Map<String, String> dictionary = yamlData.get("Dictionary");
-                if (dictionary.containsKey(hash)) {
-                    return dictionary.get(hash);
-                }
-            }
-
-            return "Not found";
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "Error";
         }
 
     }
@@ -160,7 +137,7 @@ public class App {
 
         }
     }
-    
+
 
     @FXML
     public void goBack(ActionEvent event) throws IOException {
