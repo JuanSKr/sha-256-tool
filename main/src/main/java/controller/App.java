@@ -51,25 +51,28 @@ public class App {
     private Label copiedTxt;
 
     @FXML
+    private Label invalidHash;
+
+    @FXML
     private TextField txtField;
 
 
     @FXML
     protected void encryptedButton() {
 
-        String texto = txtField.getText();
+        String text = txtField.getText();
 
         if (toLower.isSelected()) {
-            if (texto.isEmpty()) {
+            if (text.isEmpty()) {
                 emptyField.setVisible(true);
             } else {
                 emptyField.setVisible(false);
-                txtField.setText(Hash.getSHA256Hash(texto.toLowerCase()));
+                txtField.setText(Hash.getSHA256Hash(text.toLowerCase()));
                 txtField.setEditable(false);
             }
         } else {
             emptyField.setVisible(false);
-            txtField.setText(Hash.getSHA256Hash(texto));
+            txtField.setText(Hash.getSHA256Hash(text));
             txtField.setEditable(false);
         }
 
@@ -87,13 +90,19 @@ public class App {
 
         if (text.isEmpty()) {
             emptyField2.setVisible(true);
+            copiedTxt.setVisible(false);
+            invalidHash.setVisible(false);
         } else {
             if (matcher.matches()) {
                 txtField.setText(goDecrypt(text, filePath));
                 txtField.setEditable(false);
                 emptyField2.setVisible(false);
+                invalidHash.setVisible(false);
+                copiedTxt.setVisible(false);
             } else {
-                System.out.println("Please enter a valid hash");
+                emptyField2.setVisible(false);
+                invalidHash.setVisible(true);
+                copiedTxt.setVisible(false);
             }
         }
 
@@ -131,25 +140,27 @@ public class App {
         txtField.clear();
         txtField.setEditable(true);
         copiedTxt.setVisible(false);
+        invalidHash.setVisible(false);
 
     }
 
     @FXML
     protected void copyHash() {
-        String texto = txtField.getText();
+        String text = txtField.getText();
 
-        if (texto.isEmpty()) {
+        if (text.isEmpty()) {
             emptyField.setVisible(true);
         } else {
             Clipboard clipboard = Clipboard.getSystemClipboard();
             ClipboardContent content = new ClipboardContent();
 
             copiedTxt.setVisible(true);
-            content.putString(texto);
+            content.putString(text);
             clipboard.setContent(content);
 
         }
     }
+    
 
     @FXML
     public void goBack(ActionEvent event) throws IOException {
