@@ -1,15 +1,11 @@
 # 🔐 SHA-256 Hash Tool
 
-## 🛠️ Under development...
+## ⚠️ Under development...
 
+## ⚒️ Programming languages utilized in the development of this application:
+  <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="60" height="60"/>
 
-## ⚒️  Programming languages utilized in the development of this application:
-<ul style="list-style-type: none;">
-  <li>Java 
-    <br><img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="60" height="60"/></li>
-</ul>
-
-## ❔ Final idea:
+## ❔ Program features:
 - Initial scene with two options: Encrypt or Decrypt
 - Encrypt: Encrypts a String using the SHA-256 hash
 - Decrypt: Using a dictionary, by brute force try to decrypt it.
