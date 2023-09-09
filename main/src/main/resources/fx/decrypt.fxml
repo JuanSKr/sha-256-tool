@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/19.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.App">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.App">
     <left>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
@@ -24,7 +24,7 @@
                         <Font name="System Bold" size="30.0" />
                     </font>
                 </Label>
-                <Button fx:id="hashButton" layoutX="176.0" layoutY="277.0" mnemonicParsing="false" onAction="#encryptedButton" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Decrypt" />
+                <Button fx:id="decryptButton" layoutX="176.0" layoutY="277.0" mnemonicParsing="false" onAction="#decryptedButton" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Decrypt" />
             <Button fx:id="cleanButton" layoutX="262.0" layoutY="277.0" mnemonicParsing="false" onAction="#cleanButton" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Clean" />
             <Button fx:id="copyButton" layoutX="345.0" layoutY="277.0" mnemonicParsing="false" onAction="#copyHash" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Copy" />
             <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBack" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" text="Return" />

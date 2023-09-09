@@ -9,13 +9,22 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
+import org.yaml.snakeyaml.Yaml;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.Map;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class App {
 
     @FXML
     private Button hashButton;
+
+    @FXML
+    private Button decryptButton;
 
     @FXML
     private Button cleanButton;
@@ -48,6 +57,42 @@ public class App {
             txtField.setText(Hash.getSHA256Hash(texto));
             txtField.setEditable(false);
         }
+    }
+
+    @FXML
+    protected void decryptedButton() {
+
+        String text = txtField.getText();
+        String filePath = "/yml/dictionary.yml";
+
+        System.out.println(goDecrypt(text, filePath));
+
+    }
+
+    protected String goDecrypt(String hash, String filepath) {
+
+        try {
+
+            InputStream inputStream = App.class.getResourceAsStream(filepath);
+
+            Yaml yaml = new Yaml();
+
+            Map<String, Map<String, String>> yamlData = yaml.load(inputStream);
+
+            if (yamlData.containsKey("Dictionary")) {
+                Map<String, String> dictionary = yamlData.get("Dictionary");
+                if (dictionary.containsKey(hash)) {
+                    return dictionary.get(hash);
+                }
+            }
+
+            return "Not found";
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "Error";
+        }
+
     }
 
     @FXML
