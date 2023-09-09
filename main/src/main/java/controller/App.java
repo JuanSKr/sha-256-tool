@@ -5,6 +5,7 @@ import hash_code.Hash;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.Clipboard;
@@ -36,6 +37,9 @@ public class App {
     private Button backButton;
 
     @FXML
+    private CheckBox toLower;
+
+    @FXML
     private Label emptyField;
 
     @FXML
@@ -50,17 +54,27 @@ public class App {
 
         String texto = txtField.getText();
 
-        if (texto.isEmpty()) {
-            emptyField.setVisible(true);
+        if (toLower.isSelected()) {
+            if (texto.isEmpty()) {
+                emptyField.setVisible(true);
+            } else {
+                emptyField.setVisible(false);
+                txtField.setText(Hash.getSHA256Hash(texto.toLowerCase()));
+                txtField.setEditable(false);
+            }
         } else {
             emptyField.setVisible(false);
             txtField.setText(Hash.getSHA256Hash(texto));
             txtField.setEditable(false);
         }
+
+
     }
 
     @FXML
     protected void decryptedButton() {
+
+        
 
         String text = txtField.getText();
         String filePath = "/yml/dictionary.yml";

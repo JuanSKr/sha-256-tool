@@ -4,6 +4,7 @@ import functionality.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 
 import java.io.IOException;
 
@@ -14,6 +15,7 @@ public class Enter {
 
     @FXML
     private Button encrypt;
+
 
     public void goEncrypt(ActionEvent event) throws IOException {
         Main m = new Main();
