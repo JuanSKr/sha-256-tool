@@ -18,6 +18,8 @@ import java.util.Map;
 
 import java.io.IOException;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class App {
 
@@ -41,6 +43,9 @@ public class App {
 
     @FXML
     private Label emptyField;
+
+    @FXML
+    private Label emptyField2;
 
     @FXML
     private Label copiedTxt;
@@ -74,12 +79,23 @@ public class App {
     @FXML
     protected void decryptedButton() {
 
-        
-
         String text = txtField.getText();
         String filePath = "/yml/dictionary.yml";
 
-        System.out.println(goDecrypt(text, filePath));
+        Pattern pattern = Pattern.compile("^[a-fA-F0-9]{64}$");
+        Matcher matcher = pattern.matcher(text);
+
+        if (text.isEmpty()) {
+            emptyField2.setVisible(true);
+        } else {
+            if (matcher.matches()) {
+                txtField.setText(goDecrypt(text, filePath));
+                txtField.setEditable(false);
+                emptyField2.setVisible(false);
+            } else {
+                System.out.println("Please enter a valid hash");
+            }
+        }
 
     }
 
