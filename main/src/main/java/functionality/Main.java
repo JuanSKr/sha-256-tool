@@ -24,7 +24,7 @@ public class Main extends Application {
         stg = stage;
         stage.setResizable(false);
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fx/enter.fxml")));
-        stage.setTitle("SHA-256 TOOL");
+        stage.setTitle("SHA-256 Tool");
         stage.setScene(new Scene(root, 600, 400));
         stage.show();
 

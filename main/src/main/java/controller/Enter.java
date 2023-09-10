@@ -16,6 +16,9 @@ public class Enter {
     @FXML
     private Button encrypt;
 
+    @FXML
+    private Button leave;
+
 
     public void goEncrypt(ActionEvent event) throws IOException {
         Main m = new Main();
@@ -25,6 +28,10 @@ public class Enter {
     public void goDecrypt(ActionEvent event) throws IOException {
         Main m = new Main();
         m.decryptScene("decrypt.fxml");
+    }
+
+    public void goLeave(ActionEvent event) throws IOException {
+        System.exit(0);
     }
 
 }
