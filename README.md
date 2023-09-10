@@ -21,6 +21,7 @@
 
 ## 📚  Libraries implemented in the development process: 
 - JavaFX 19.0.2
+- YAML 2.0
 
 
 
