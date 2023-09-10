@@ -7,25 +7,35 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Enter">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #262626;" stylesheets="@../css/Enter.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Enter">
     <center>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
-                <ImageView fitHeight="382.0" fitWidth="492.0" layoutX="42.0" layoutY="-33.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView id="logo" fitHeight="293.0" fitWidth="243.0" layoutX="80.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../img/sk-logo.png" />
+                        <Image url="@../img/app-logo.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="encrypt" layoutX="137.0" layoutY="255.0" mnemonicParsing="false" onAction="#goEncrypt" prefHeight="44.0" prefWidth="134.0" style="-fx-background-color: #FFC900;" text="Encrypt">
+                <Button id="encryptButton" fx:id="encrypt" layoutX="383.0" layoutY="92.0" mnemonicParsing="false" onAction="#goEncrypt" prefHeight="58.0" prefWidth="134.0" stylesheets="@../css/Enter.css" text="Encrypt" textFill="WHITE">
                     <font>
                         <Font size="27.0" />
                     </font>
                 </Button>
-            <Button fx:id="decrypt" layoutX="302.0" layoutY="255.0" mnemonicParsing="false" onAction="#goDecrypt" prefHeight="44.0" prefWidth="134.0" style="-fx-background-color: #FFC900;" text="Decrypt ">
+            <Button id="decryptButton" fx:id="decrypt" layoutX="383.0" layoutY="178.0" mnemonicParsing="false" onAction="#goDecrypt" prefHeight="44.0" prefWidth="134.0" stylesheets="@../css/Enter.css" text="Decrypt ">
                <font>
                   <Font size="26.0" />
                </font>
             </Button>
+            <Button id="leaveButton" fx:id="decrypt1" layoutX="383.0" layoutY="263.0" mnemonicParsing="false" onAction="#goDecrypt" prefHeight="44.0" prefWidth="134.0" stylesheets="@../css/Enter.css" text="Leave">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="92.0" fitWidth="119.0" layoutX="504.0" layoutY="-18.0">
+               <image>
+                  <Image url="@../img/sk-logo.png" />
+               </image>
+            </ImageView>
             </children>
         </AnchorPane>
     </center>

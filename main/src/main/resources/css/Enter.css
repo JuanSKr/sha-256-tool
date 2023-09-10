@@ -1,0 +1,56 @@
+
+#encryptButton {
+    -fx-background-color: #ffbb00;
+    -fx-pref-width: 134px;
+    -fx-pref-height: 58px;
+    -fx-layout-x: 383px;
+    -fx-layout-y: 92px;
+    -fx-font: bold 27px Spendthrift;
+    -fx-text-fill: #404040;
+}
+
+#encryptButton:hover {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 10, 0, 2, 2);
+}
+
+#decryptButton {
+    -fx-background-color: #ffbb00;
+    -fx-pref-width: 134px;
+    -fx-pref-height: 56px;
+    -fx-layout-x: 383px;
+    -fx-layout-y: 178px;
+    -fx-font: bold 25px Spendthrift;
+    -fx-text-fill: #404040;
+}
+
+#decryptButton:hover {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 10, 0, 2, 2);
+}
+
+#logo {
+    -fx-layout-x: 84px;
+    -fx-layout-y: 41px;
+    -fx-fit-width: 243px;
+    -fx-fit-height: 243px;
+}
+
+#logo:hover {
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 8, 0, 0, 0);
+}
+
+#leaveButton {
+    -fx-background-color: #ffbb00;
+    -fx-pref-width: 134px;
+    -fx-pref-height: 56px;
+    -fx-layout-x: 383px;
+    -fx-layout-y: 178px;
+    -fx-font: bold 25px Spendthrift;
+    -fx-text-fill: #404040;
+}
+
+#leaveButton:hover {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 10, 0, 2, 2);
+}
