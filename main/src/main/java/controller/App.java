@@ -63,20 +63,13 @@ public class App {
 
         String text = txtField.getText();
 
-        if (toLower.isSelected()) {
-            if (text.isEmpty()) {
-                emptyField.setVisible(true);
-            } else {
-                emptyField.setVisible(false);
-                txtField.setText(Hash.getSHA256Hash(text.toLowerCase()));
-                txtField.setEditable(false);
-            }
+        if (text.isEmpty()) {
+            emptyField.setVisible(true);
         } else {
             emptyField.setVisible(false);
-            txtField.setText(Hash.getSHA256Hash(text));
+            txtField.setText(Hash.getSHA256Hash(text.toLowerCase()));
             txtField.setEditable(false);
         }
-
 
     }
 
@@ -112,13 +105,20 @@ public class App {
     }
 
     @FXML
-    protected void cleanButton() {
+    protected void cleanButtonEncrypt() {
+
+        txtField.clear();
+        txtField.setEditable(true);
+        copiedTxt.setVisible(false);
+    }
+
+    @FXML
+    protected void cleanButtonDecrypt() {
 
         txtField.clear();
         txtField.setEditable(true);
         copiedTxt.setVisible(false);
         invalidHash.setVisible(false);
-
     }
 
     @FXML

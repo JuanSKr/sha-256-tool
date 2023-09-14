@@ -1,0 +1,72 @@
+
+#encryptButton {
+    -fx-background-color: #ffc900;
+    -fx-pref-width: 74px;
+    -fx-pref-height: 33px;
+    -fx-layout-x: 176px;
+    -fx-layout-y: 277px;
+    -fx-font: bold 15px Spendthrift;
+    -fx-text-fill: #404040;
+}
+
+#encryptButton:hover {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 10, 0, 2, 2);
+}
+
+#cleanButton {
+    -fx-background-color: #ffc900;
+    -fx-pref-width: 74px;
+    -fx-pref-height: 33px;
+    -fx-layout-x: 262px;
+    -fx-layout-y: 277px;
+    -fx-font: bold 15px Spendthrift;
+    -fx-text-fill: #404040;
+}
+
+#cleanButton:hover {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 10, 0, 2, 2);
+}
+
+#copyButton {
+    -fx-background-color: #ffc900;
+    -fx-pref-width: 74px;
+    -fx-pref-height: 33px;
+    -fx-layout-x: 345px;
+    -fx-layout-y: 277px;
+    -fx-font: bold 15px Spendthrift;
+    -fx-text-fill: #404040;
+}
+
+#copyButton:hover {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 10, 0, 2, 2);
+}
+
+#returnButton {
+    -fx-background-color: #ffc900;
+    -fx-pref-width: 35px;
+    -fx-pref-height: 33px;
+    -fx-layout-x: 14px;
+    -fx-layout-y: 14px;
+    -fx-font: bold 15px Spendthrift;
+    -fx-text-fill: #404040;
+}
+
+#returnButton:hover {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.8), 10, 0, 2, 2);
+}
+
+#labelType {
+-fx-background-color: ffc900;
+-fx-x: 137;
+-fx-y: 255;
+-fx-pref-width: 540px;
+-fx-pref-height: 44px;
+-fx-font: bold 14.5px arial;
+-fx-text-fill: black;
+-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 0, 1, 4.5, 8);
+}
+
