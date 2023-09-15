@@ -1,7 +1,5 @@
 package hash_code;
 
-import javafx.scene.control.Label;
-
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

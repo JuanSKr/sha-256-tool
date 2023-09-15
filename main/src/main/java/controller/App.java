@@ -6,19 +6,11 @@ import hash_code.Hash;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
-import org.yaml.snakeyaml.Yaml;
-
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.util.Map;
-
 import java.io.IOException;
-import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
