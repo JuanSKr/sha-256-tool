@@ -67,6 +67,7 @@
 -fx-pref-height: 44px;
 -fx-font: bold 14.5px arial;
 -fx-text-fill: black;
+-fx-prompt-text-fill: white;
 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 0, 1, 4.5, 8);
 }
 
