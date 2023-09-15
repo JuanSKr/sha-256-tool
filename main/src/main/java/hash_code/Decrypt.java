@@ -8,6 +8,14 @@ import java.util.Map;
 
 public class Decrypt {
 
+    /**
+     * Decrypts a given SHA-256 hash by searching for a corresponding value in a YAML dictionary file.
+     *
+     * @param hash     The SHA-256 hash to decrypt.
+     * @param filepath The file path to the YAML dictionary file.
+     * @return The decrypted value if found in the dictionary, "Not found" if not found, or "Error" in case of an exception.
+     */
+
     public String goDecrypt(String hash, String filepath) {
 
         try {
