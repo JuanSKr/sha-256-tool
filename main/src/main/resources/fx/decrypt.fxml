@@ -14,6 +14,7 @@
     <left>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
+                <Button id="copyButton" fx:id="copyButton" layoutX="345.0" layoutY="294.0" mnemonicParsing="false" onAction="#copyHash" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" stylesheets="@../css/Decrypt.css" text="Copy" />
                 <ImageView fitHeight="74.0" fitWidth="324.0" layoutX="207.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../img/decrypt.png" />
@@ -30,7 +31,6 @@
                 </Label>
                 <Button id="decryptButton" fx:id="hashButton" layoutX="177.0" layoutY="294.0" mnemonicParsing="false" onAction="#decryptedButton" prefHeight="149.0" prefWidth="138.0" style="-fx-background-color: #ffc900;" stylesheets="@../css/Decrypt.css" text="Decrypt" />
                 <Button id="cleanButton" fx:id="cleanButtonEncrypt" layoutX="262.0" layoutY="294.0" mnemonicParsing="false" onAction="#cleanButtonDecrypt" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" stylesheets="@../css/Decrypt.css" text="Clean" />
-                <Button id="copyButton" fx:id="copyButton" layoutX="345.0" layoutY="294.0" mnemonicParsing="false" onAction="#copyHash" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" stylesheets="@../css/Decrypt.css" text="Copy" />
                 <Button id="returnButton" fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBack" prefHeight="33.0" prefWidth="20.0" style="-fx-background-color: #ffc900;" stylesheets="@../css/Encrypt.css" text="🏠" />
                 <Label fx:id="emptyField2" layoutX="42.0" layoutY="200.0" prefHeight="35.0" prefWidth="225.0" text="Write something..." textFill="WHITE" visible="false">
                     <font>

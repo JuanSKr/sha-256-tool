@@ -40,9 +40,6 @@ public class App {
     private Button backButton;
 
     @FXML
-    private CheckBox toLower;
-
-    @FXML
     private Label emptyField;
 
     @FXML
@@ -85,23 +82,14 @@ public class App {
         Matcher matcher = pattern.matcher(text);
 
         if (text.isEmpty()) {
-            emptyField2.setVisible(true);
-            copiedTxt.setVisible(false);
-            invalidHash.setVisible(false);
+            emptyDecrypt();
         } else {
             if (matcher.matches()) {
-                txtField.setText(decrypt.goDecrypt(text, filePath));
-                txtField.setEditable(false);
-                emptyField2.setVisible(false);
-                invalidHash.setVisible(false);
-                copiedTxt.setVisible(false);
+                matchesDecrypt(decrypt, text, filePath);
             } else {
-                emptyField2.setVisible(false);
-                invalidHash.setVisible(true);
-                copiedTxt.setVisible(false);
+                setInvalidHash();
             }
         }
-
     }
 
     @FXML
@@ -126,7 +114,11 @@ public class App {
         String text = txtField.getText();
 
         if (text.isEmpty()) {
-            emptyField.setVisible(true);
+            if(emptyField != null) {
+                emptyField.setVisible(true);
+            } else {
+                emptyField2.setVisible(true);
+            }
         } else {
             Clipboard clipboard = Clipboard.getSystemClipboard();
             ClipboardContent content = new ClipboardContent();
@@ -134,7 +126,6 @@ public class App {
             copiedTxt.setVisible(true);
             content.putString(text);
             clipboard.setContent(content);
-
         }
     }
 
@@ -144,5 +135,27 @@ public class App {
         Main m = new Main();
         m.enterScene("enter.fxml");
     }
+
+    public void emptyDecrypt() {
+        emptyField2.setVisible(true);
+        copiedTxt.setVisible(false);
+        invalidHash.setVisible(false);
+    }
+
+    public void matchesDecrypt(Decrypt decrypt, String text, String filePath) {
+        txtField.setText(decrypt.goDecrypt(text, filePath));
+        txtField.setEditable(false);
+        emptyField2.setVisible(false);
+        invalidHash.setVisible(false);
+        copiedTxt.setVisible(false);
+    }
+
+    public void setInvalidHash() {
+        emptyField2.setVisible(false);
+        txtField.setText("Invalid Hash");
+        txtField.setStyle("-fx-text-fill: red");
+        copiedTxt.setVisible(false);
+    }
+
 
 }
