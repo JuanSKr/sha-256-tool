@@ -5,6 +5,7 @@
     -fx-pref-height: 58px;
     -fx-layout-x: 383px;
     -fx-layout-y: 92px;
+    -fx-background-radius: 5 20 20 5;
     -fx-font: bold 27px Spendthrift;
     -fx-text-fill: #404040;
 }
@@ -20,6 +21,7 @@
     -fx-pref-height: 56px;
     -fx-layout-x: 383px;
     -fx-layout-y: 178px;
+    -fx-background-radius: 20 20 20 20;
     -fx-font: bold 25px Spendthrift;
     -fx-text-fill: #404040;
 }
@@ -46,6 +48,7 @@
     -fx-pref-height: 56px;
     -fx-layout-x: 383px;
     -fx-layout-y: 178px;
+    -fx-background-radius: 20 5 5 20;
     -fx-font: bold 25px Spendthrift;
     -fx-text-fill: #404040;
 }
