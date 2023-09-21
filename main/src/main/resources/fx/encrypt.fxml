@@ -28,7 +28,7 @@
                         <Font name="System Bold" size="30.0" />
                     </font>
                 </Label>
-                <Button id="encryptButton" fx:id="hashButton" layoutX="177.0" layoutY="294.0" mnemonicParsing="false" onAction="#encryptedButton" prefHeight="149.0" prefWidth="138.0" style="-fx-background-color: #ffc900;" stylesheets="@../css/Encrypt.css" text="Encrypt" />
+                <Button id="encryptButton" fx:id="hashButton" layoutX="177.0" layoutY="294.0" mnemonicParsing="false" onAction="#encryptedButton" prefHeight="149.0" prefWidth="138.0" style="-fx-background-color: #ffc900;" stylesheets="@../css/Encrypt.css" text="Go" />
             <Button id="cleanButton" fx:id="cleanButtonEncrypt" layoutX="262.0" layoutY="294.0" mnemonicParsing="false" onAction="#cleanButtonEncrypt" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" stylesheets="@../css/Encrypt.css" text="Clean" />
             <Button id="copyButton" fx:id="copyButton" layoutX="345.0" layoutY="294.0" mnemonicParsing="false" onAction="#copyHash" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" stylesheets="@../css/Encrypt.css" text="Copy" />
             <Button id="returnButton" fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBack" prefHeight="33.0" prefWidth="20.0" style="-fx-background-color: #ffc900;" stylesheets="@../css/Encrypt.css" text="🏠" />
