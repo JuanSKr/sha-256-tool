@@ -4,6 +4,7 @@ import functionality.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+
 import java.io.IOException;
 
 public class Enter {
@@ -18,7 +19,7 @@ public class Enter {
     private Button leave;
 
 
-    /**
+    /** 
      * This method handles the action when a "goEncrypt" button is clicked.
      * It initiates a navigation action to transition to an "enter.fxml" scene, used for encryption purposes.
      * It uses the Main class to manage scene transitions.

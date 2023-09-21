@@ -8,10 +8,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -39,13 +42,16 @@ public class App {
     private Label emptyField2;
 
     @FXML
-    private Label copiedTxt;
+    private ImageView copiedImg;
 
     @FXML
     private Label invalidHash;
 
     @FXML
     private TextField txtField;
+
+    public App() {
+    }
 
 
     /**
@@ -108,7 +114,7 @@ public class App {
 
         txtField.clear();
         txtField.setEditable(true);
-        copiedTxt.setVisible(false);
+        copiedImg.setVisible(false);
     }
 
     /**
@@ -121,7 +127,7 @@ public class App {
 
         txtField.clear();
         txtField.setEditable(true);
-        copiedTxt.setVisible(false);
+        copiedImg.setVisible(false);
         invalidHash.setVisible(false);
     }
 
@@ -146,7 +152,10 @@ public class App {
             Clipboard clipboard = Clipboard.getSystemClipboard();
             ClipboardContent content = new ClipboardContent();
 
-            copiedTxt.setVisible(true);
+            copiedImg.setVisible(true);
+
+            copiedDelay(5000);
+
             content.putString(text);
             clipboard.setContent(content);
         }
@@ -174,7 +183,7 @@ public class App {
 
     public void emptyDecrypt() {
         emptyField2.setVisible(true);
-        copiedTxt.setVisible(false);
+        copiedImg.setVisible(false);
         invalidHash.setVisible(false);
     }
 
@@ -193,7 +202,7 @@ public class App {
         txtField.setEditable(false);
         emptyField2.setVisible(false);
         invalidHash.setVisible(false);
-        copiedTxt.setVisible(false);
+        copiedImg.setVisible(false);
     }
 
     /**
@@ -206,7 +215,20 @@ public class App {
         emptyField2.setVisible(false);
         txtField.setText("Invalid Hash");
         txtField.setStyle("-fx-text-fill: red");
-        copiedTxt.setVisible(false);
+        copiedImg.setVisible(false);
+    }
+
+    public void copiedDelay(int delay) {
+
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                copiedImg.setVisible(false);
+            }
+        }, delay);
+
     }
 
 }

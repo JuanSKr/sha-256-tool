@@ -39,7 +39,7 @@ public class Main extends Application {
         stg.getScene().setRoot(pane);
     }
 
-    public void enterScene(String fxml) throws  IOException {
+    public void enterScene(String fxml) throws IOException {
         Parent pane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fx/enter.fxml")));
         stg.getScene().setRoot(pane);
     }
