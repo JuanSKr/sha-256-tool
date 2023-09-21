@@ -4,9 +4,10 @@
   <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="60" height="60"/>
 
 ## ❔ Program features:
-- Initial scene with two options: Encrypt or Decrypt
+- Initial scene with three options: Encrypt, Decrypt and Leave
 - Encrypt: Encrypts a String using the SHA-256 hash
 - Decrypt: Using a dictionary, by brute force try to decrypt it.
+- Leave: Close the program.
   - 🔐 Encrypt scene:
       - A TextField to write the text
       - Encrypt button (Locks the TextField)
