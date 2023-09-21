@@ -36,10 +36,7 @@ public class App {
     private Button backButton;
 
     @FXML
-    private Label emptyField;
-
-    @FXML
-    private Label emptyField2;
+    private ImageView emptyImg;
 
     @FXML
     private ImageView copiedImg;
@@ -66,9 +63,10 @@ public class App {
         String text = txtField.getText();
 
         if (text.isEmpty()) {
-            emptyField.setVisible(true);
+            emptyImg.setVisible(true);
+            emptyDelay(3000);
         } else {
-            emptyField.setVisible(false);
+            emptyImg.setVisible(false);
             txtField.setText(Hash.getSHA256Hash(text.toLowerCase()));
             txtField.setEditable(false);
         }
@@ -143,10 +141,12 @@ public class App {
         String text = txtField.getText();
 
         if (text.isEmpty()) {
-            if (emptyField != null) {
-                emptyField.setVisible(true);
+            if (emptyImg != null) {
+                emptyImg.setVisible(true);
+                emptyDelay(3000);
             } else {
-                emptyField2.setVisible(true);
+                emptyImg.setVisible(true);
+                emptyDelay(3000);
             }
         } else {
             Clipboard clipboard = Clipboard.getSystemClipboard();
@@ -182,7 +182,8 @@ public class App {
      */
 
     public void emptyDecrypt() {
-        emptyField2.setVisible(true);
+        emptyImg.setVisible(true);
+        emptyDelay(3000);
         copiedImg.setVisible(false);
         invalidHash.setVisible(false);
     }
@@ -200,7 +201,7 @@ public class App {
     public void matchesDecrypt(Decrypt decrypt, String text, String filePath) {
         txtField.setText(decrypt.goDecrypt(text, filePath));
         txtField.setEditable(false);
-        emptyField2.setVisible(false);
+        emptyImg.setVisible(false);
         invalidHash.setVisible(false);
         copiedImg.setVisible(false);
     }
@@ -212,7 +213,7 @@ public class App {
      */
 
     public void setInvalidHash() {
-        emptyField2.setVisible(false);
+        emptyImg.setVisible(false);
         txtField.setText("Invalid Hash");
         txtField.setStyle("-fx-text-fill: red");
         copiedImg.setVisible(false);
@@ -226,6 +227,19 @@ public class App {
             @Override
             public void run() {
                 copiedImg.setVisible(false);
+            }
+        }, delay);
+
+    }
+
+    public void emptyDelay(int delay) {
+
+        Timer timer = new Timer();
+
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                emptyImg.setVisible(false);
             }
         }, delay);
 

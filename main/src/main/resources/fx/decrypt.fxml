@@ -32,10 +32,6 @@
                 <Button id="decryptButton" fx:id="hashButton" layoutX="177.0" layoutY="294.0" mnemonicParsing="false" onAction="#decryptedButton" prefHeight="149.0" prefWidth="138.0" style="-fx-background-color: #ffc900;" stylesheets="@../css/Decrypt.css" text="Go" />
                 <Button id="cleanButton" fx:id="cleanButtonEncrypt" layoutX="262.0" layoutY="294.0" mnemonicParsing="false" onAction="#cleanButtonDecrypt" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffc900;" stylesheets="@../css/Decrypt.css" text="Clean" />
                 <Button id="returnButton" fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBack" prefHeight="33.0" prefWidth="20.0" style="-fx-background-color: #ffc900;" stylesheets="@../css/Encrypt.css" text="🏠" />
-                <Label fx:id="emptyField2" layoutX="42.0" layoutY="200.0" prefHeight="35.0" prefWidth="225.0" text="Write something..." textFill="WHITE" visible="false">
-                    <font>
-                        <Font size="18.0" />
-                    </font></Label>
                 <ImageView fitHeight="132.0" fitWidth="108.0" layoutX="78.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../img/decrypt-logo.png" />
@@ -49,6 +45,11 @@
             <ImageView fx:id="copiedImg" fitHeight="42.0" fitWidth="138.0" layoutX="422.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../img/copied-img.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="emptyImg" fitHeight="42.0" fitWidth="138.0" layoutX="29.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../img/notext-img.png" />
                </image>
             </ImageView>
             </children>
