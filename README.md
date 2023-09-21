@@ -1,7 +1,5 @@
 # 🔐 SHA-256 Hash Tool
 
-## ⚠️ Under development...
-
 ## ⚒️ Programming languages utilized in the development of this application:
   <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="60" height="60"/>
 
